@@ -28,7 +28,7 @@
         {{-- Non logged-in Visitors --}}
     @else
         <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center login-cards">
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-sm-6 col-md-4 col-lg-3 float-left mb-4">
                 <a href="/login-staff">
                     <div class="card">
                         <div class="card-body">

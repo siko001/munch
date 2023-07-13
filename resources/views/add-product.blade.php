@@ -65,12 +65,17 @@
 
                     </div>
                 </div>
-                <div class="col-md-4 mt-5 ">
+                <div class="col-md-4 mt-5">
                     <div class="map_container">
                         @csrf
-                        <div id="imagePreview"></div>
-                        <input class="mt-5 " type="file" name="image" id="image"
-                            onchange="previewImage(event)" required>
+                        <div style="max-width:300px:max-heigth:300px;object-fit:cover;" id="imagePreview"
+                            class="mx-auto "></div>
+                        <label for="image" class="custom-file-button mt-5 ">
+                            Upload Product Photo
+                            <input class="mt-5 " type="file" name="image" id="image"
+                                onchange="previewImage(event)" required>
+                        </label>
+
                         @error('image')
                             <div class="error">{{ $message }}</div>
                         @enderror

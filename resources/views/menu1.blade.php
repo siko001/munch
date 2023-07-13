@@ -29,10 +29,11 @@
                 <li data-filter=".side">Sides</li>
             </ul>
             <div class="filters-content">
-                <div class="row grid" id="menuContainer" style="position:;"> <button id="backToTopButton"
-                        title="Back to Top">
+                <div class="row grid" id="menuContainer" style="height: 5100px;">
+                    <button id="backToTopButton" title="Back to Top">
                         <h2>↑</h2>
-                    </button></div>
+                    </button>
+                </div>
             </div>
 
         </div>
