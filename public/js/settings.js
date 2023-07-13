@@ -606,6 +606,7 @@ function generateOverlayContentReservations(userRole, reservation, data, status)
 
 	if (data === 'reservation') {
 		return `
+		<div class="text-center justify-content-center>
     <p><strong>ID: ${reservation.id}</strong></p>
 	<hr style="width:25%;">
 	<strong><p style="text-decoration:underline">Details</p></strong>
@@ -624,6 +625,7 @@ function generateOverlayContentReservations(userRole, reservation, data, status)
 	<p>Status: ${reservation.status} </p>
 	<hr>
     ${buttons}
+	</div>
   `;
 	} else {
 		return '<h3 class=" mx-5 px-5 mt-5 mb-5 pt-5 pb-5 ">NOTHING TO SEE HERE</h3>';
@@ -650,6 +652,7 @@ function generateOverlayContentReservationsUser(userRole, reservation, data, sta
 	console.log(data);
 	if (data === 'activeReservation') {
 		return `
+		<div class="text-center justify-content-center>
     <p><strong>ID: ${reservation.id}</strong></p>
 	<hr style="width:25%;">
 	<strong><p style="text-decoration:underline">Details</p></strong>
@@ -668,9 +671,11 @@ function generateOverlayContentReservationsUser(userRole, reservation, data, sta
 	<p>Status: ${reservation.status} </p>
 	<hr>
     ${buttons}
+	</div>
   `;
 	} else if (data === 'pastReservation') {
 		return `
+			<div class="text-center justify-content-center>
     <p><strong>ID: ${reservation.id}</strong></p>
 	<hr style="width:25%;">
 	<strong><p style="text-decoration:underline">Details</p></strong>
@@ -688,10 +693,12 @@ function generateOverlayContentReservationsUser(userRole, reservation, data, sta
     <p>Special Requests: ${reservation.requests}</p>
 	<p>Status: ${reservation.status} </p>
 	<hr>
+	</div>
     ${buttons}
   `;
 	} else {
-		return `<p><strong>ID: ${reservation.id}</strong></p>
+		return `
+			<div class="text-center justify-content-center><p><strong>ID: ${reservation.id}</strong></p>
 	<hr style="width:25%;">
 	<strong><p style="text-decoration:underline">Details</p></strong>
     <p>Date: ${reservation.date}</p>
@@ -707,7 +714,7 @@ function generateOverlayContentReservationsUser(userRole, reservation, data, sta
 	
     <p>Special Requests: ${reservation.requests}</p>
 	<p>Status: ${reservation.status} </p>
-	<hr>`;
+	<hr></div>`;
 	}
 }
 document.addEventListener('DOMContentLoaded', function () {
@@ -1006,5 +1013,3 @@ document.getElementById('image').addEventListener('change', function (e) {
 	var imagePreview = document.getElementById('imagePreview');
 	imagePreview.src = URL.createObjectURL(e.target.files[0]);
 });
-
-

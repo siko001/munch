@@ -1058,19 +1058,9 @@ a:focus {
 	display: block;
 }
 .login-cards div.card {
-	position: relative;
-	overflow: hidden;
-}
-
-.remove-option-space option {
-	padding-top: 0;
-	margin-top: 0;
-}
-
-.login-cards div.card {
 	box-sizing: border-box;
-	width: 260px;
-	height: 330px;
+	width: 100%; /* Update width to 100% */
+	height: auto; /* Update height to auto */
 	background: rgba(217, 217, 217, 0.58);
 	border: 1px solid white;
 	box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
@@ -1085,45 +1075,17 @@ a:focus {
 
 .login-cards div.card:hover {
 	border: 1px solid black;
-	transform: scale(1.25);
+	transform: scale(1.1); /* Update scale to 1.1 */
 	color: darkblue;
 }
 
 .login-cards div.card:active {
-	transform: scale(1.25) rotateZ(1.7deg);
-}
-
-.card-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.image-container {
-	width: 75%;
-}
-
-.card-img-top {
-	width: 100%;
-	height: auto;
-}
-
-.staff,
-.user {
-	margin-top: 1rem;
+	transform: scale(1.1) rotateZ(1.7deg); /* Update scale to 1.1 */
 }
 
 /* Add media queries for responsiveness */
-@media (max-width: 576px) {
-	.login-cards.card {
-		width: 100%;
-		height: auto;
-		margin-bottom: 1rem;
-	}
-}
-
 @media (min-width: 577px) {
-	.login-cards.card {
+	.login-cards div.card {
 		width: 260px;
 		height: 330px;
 	}
@@ -1527,3 +1489,12 @@ input[type='file'] {
 .rating input[type='radio']:checked ~ label {
 	color: #ffcc00;
 }
+
+@media (max-width: 579px) {
+	.this-login-card {
+		position: relative;
+		left: -30px;
+	}
+}
+
+/*  */
