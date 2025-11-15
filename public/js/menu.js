@@ -5,6 +5,7 @@ fetch('/menu/api')
 		const menuContainer = document.getElementById('menuContainer');
 		if (menuContainer) {
 			generateMenuCards(data); // Only execute the function if the container exists
+			setContainerHeight();
 			scrollToProduct();
 		}
 	})
@@ -161,3 +162,16 @@ function scrollToProduct() {
 setTimeout(function () {
 	scrollToProduct();
 }, 2086);
+
+
+function setContainerHeight() {
+	const menuContainer = document.getElementById('menuContainer');
+	if (menuContainer) {
+		const containerHeight = menuContainer.scrollHeight;
+		menuContainer.style.height = containerHeight;
+	}
+}
+
+setTimeout(() => {
+	setContainerHeight();
+}, 1000);
