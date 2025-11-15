@@ -90,8 +90,9 @@ function updateCharCount(textarea) {
 document.addEventListener('DOMContentLoaded', function () {
 	const form = document.querySelector('form');
 
+	if (!form) return;
 	// Add an event listener to the form submit event
-	form.addEventListener('submit', function (event) {
+	form?.addEventListener('submit', function (event) {
 		const categorySelect = document.querySelector('select[name="category"]');
 
 		// Check if the disabled option is selected

@@ -1009,7 +1009,7 @@ if (timeInput) {
 }
 
 // JavaScript code for previewing the uploaded image
-document.getElementById('image').addEventListener('change', function (e) {
+document.getElementById('image')?.addEventListener('change', function (e) {
 	var imagePreview = document.getElementById('imagePreview');
 	imagePreview.src = URL.createObjectURL(e.target.files[0]);
 });

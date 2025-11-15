@@ -4,9 +4,9 @@ fetch('/menu/api')
 		// Perform a check if the menuContainer exists on the current page
 		const menuContainer = document.getElementById('menuContainer');
 		if (menuContainer) {
-			generateMenuCards(data); // Only execute the function if the container exists
-			setContainerHeight();
+			generateMenuCards(data);
 			scrollToProduct();
+			setContainerHeight();
 		}
 	})
 	.catch((error) => console.error('Error:', error));
@@ -168,10 +168,12 @@ function setContainerHeight() {
 	const menuContainer = document.getElementById('menuContainer');
 	if (menuContainer) {
 		const containerHeight = menuContainer.scrollHeight;
-		menuContainer.style.height = containerHeight;
+		menuContainer.style.height = containerHeight + 'px';
+		console.log(menuContainer);
+		console.log('Menu container height set to:', containerHeight);
 	}
 }
 
 setTimeout(() => {
 	setContainerHeight();
-}, 1000);
+}, 2000);
