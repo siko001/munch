@@ -26,7 +26,7 @@ class IndexController extends Controller {
         $activeDealid = Deal::activeDeals()->first();
 
         //get all deals without today's
-        $allDealsExcludingNow = Deal::where("id", "!=", $activeDealid->id)?->inRandomOrder()->limit(1)->get();
+        $allDealsExcludingNow = Deal::where("id", "!=", $activeDealid?->id)?->inRandomOrder()->limit(1)->get();
         $cartItem = Cart::content()?->filter(function ($item) {
             return $item?->options?->category;
         });
