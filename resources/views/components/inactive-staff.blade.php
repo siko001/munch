@@ -26,5 +26,5 @@
 </div>
 
 
-<x-cardOverlay>
-</x-cardOverlay>
+<x-card-overlay>
+</x-card-overlay>

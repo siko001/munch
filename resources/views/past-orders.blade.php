@@ -48,6 +48,6 @@
 
         </div>
     </section>
-    <x-cardOverLay>
-    </x-cardOverLay>
+    <x-card-overlay>
+    </x-card-overlay>
 </x-layout>
