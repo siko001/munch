@@ -67,7 +67,7 @@
     <div class="col-md-6 text-center mt-4">
         <h2 class="mb-2">Location</h2>
         <div class="map_container mt-3" style="max-height: 335px;">
-            <div id="googleMap"></div>
+            <iframe style="height:100%;width:100%;border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d700.542753079352!2d14.462633244042793!3d35.91116759667368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130e4faab27102b9%3A0x52ef6466a787b94f!2sWilezo%20Supermarket!5e0!3m2!1sen!2smt!4v1763188925467!5m2!1sen!2smt"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="mt-4 mb-4">
             @error('date')
